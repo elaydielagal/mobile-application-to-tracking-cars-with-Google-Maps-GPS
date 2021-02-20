@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.view.AddReport">
+    <ContentPage.Content>
+    <StackLayout Padding="30"
+             VerticalOptions="Start">
+            <Label Text="Welcome to Tracking cars application !"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Name Report"
+          HorizontalOptions="Center"/>
+            <Entry Text=""
+          x:Name="name_rapport"/>
+            <Label Text="Comentary Problem"
+          HorizontalOptions="Center"/>
+            <Entry Text=""
+          x:Name="commentary_problem"/>
+             
+            <Button Text="save"
+        TextColor="White"
+        BackgroundColor="#22A7F0"
+        x:Name="Buttonsave"
+        Clicked="Buttonsave_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.view.itemDetails">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="MyListView" RowHeight="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" ></ColumnDefinition>
+                                    <ColumnDefinition Width="*"  ></ColumnDefinition>
+                                    <ColumnDefinition Width="*"  ></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Text="{Binding name_rapport}" FontSize="Small" ></Label>
+
+                                <Label Grid.Column="1" Text="{Binding Commentary}" FontSize="Small"></Label>
+
+
+                                <Label Grid.Column="2" Text="{Binding id_report}"  FontSize="Small"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button  Clicked="Button_Clicked" Text="GetMaps"></Button>
+            <Button x:Name="AddReport" Clicked="AddReport_Clicked" Text="Add New Report"></Button>
+            <Button x:Name="BtnLocation" Clicked="BtnLocation_Clicked" Text="Get Location" ></Button>
+            <Label x:Name="loc"></Label>
+        </StackLayout>
+         
+ 
+    </ContentPage.Content>
+</ContentPage>

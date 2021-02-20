@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                           
+             x:Class="App3.view.TestListView"
+              >
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ListView x:Name="MyListView" RowHeight="50" HasUnevenRows="True" SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"  >
+
+                                    </ColumnDefinition>
+                                    <ColumnDefinition Width="*" BindingContext="start date"></ColumnDefinition>
+                                    <ColumnDefinition Width="*" BindingContext="end date"></ColumnDefinition>
+                                    <ColumnDefinition Width="*" BindingContext="report"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0"  FontSize="Small" Text="{Binding id_mission}"   x:Name="Id_mission" VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="EndAndExpand">
+                                    <Label.GestureRecognizers >
+                                        <TapGestureRecognizer
+                                            Tapped="TapGestureRecognizer_Tapped" >
+
+                                        </TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" Text="{Binding name_mission}" FontSize="Small" ></Label>
+
+                                <Label Grid.Column="2" Text="{Binding Datetime_Departure}" FontSize="Small"></Label>
+                               
+
+                                <Label Grid.Column="3" Text="{Binding Datetime_Arrival}"  FontSize="Small"></Label>
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
